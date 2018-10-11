@@ -37,7 +37,7 @@
     var svgHeight = 500 - margin.top - margin.bottom;
 
     function loadData() {
-      d3.json("https://github.com/prerana95chandru/VA_HW4/blob/master/us-10m.json", function (json) {
+      d3.json("https://raw.githubusercontent.com/prerana95chandru/VA_HW4/master/us-10m.json", function (json) {
         myPaths = json;
         amounts = {}
         for (i = 0; i < 838; i++) {
@@ -54,14 +54,14 @@
     }
 
     function loadData2() {
-      d3.csv("https://github.com/prerana95chandru/VA_HW4/blob/master/losses2015_transformed.csv", function (err, data) {
+      d3.csv("https://raw.githubusercontent.com/prerana95chandru/VA_HW4/master/losses2015_transformed.csv", function (err, data) {
         myData = data;
         d3.selectAll("#bar_Chart").remove();
         createBarChart(null);
       });
     }
     function loadData2(id) {
-      d3.csv("https://github.com/prerana95chandru/VA_HW4/blob/master/losses2015_transformed.csv", function (err, data) {
+      d3.csv("https://raw.githubusercontent.com/prerana95chandru/VA_HW4/master/losses2015_transformed.csv", function (err, data) {
         myData = data;
         d3.selectAll("#bar_Chart").remove();
         createBarChart(id);
